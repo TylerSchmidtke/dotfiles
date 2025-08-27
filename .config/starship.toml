@@ -5,12 +5,25 @@
 # Palettes must be defined _after_ this line
 palette = "catppuccin_macchiato"
 
+# Prompt layout configuration
+format = """$directory$git_branch$git_status$package$rust$golang$fill$time
+$character"""
+
+[time]
+disabled = false
+format = '[$time]($style)'
+style = "bold blue"
+time_format = "%Y-%m-%d %H:%M:%S"
+use_12hr = false
+utc_time_offset = "local"
+
+
 # Starship modules
 [character]
 # Note the use of Catppuccin color 'peach'
-success_symbol = "[[🌊](green) ❯](peach)"
-error_symbol = "[[🌊](red) ❯](peach)"
-vimcmd_symbol = "[🌊❮](subtext1)"         # For use with zsh-vi-mode
+success_symbol = "[(green) ❯](peach)"
+error_symbol = "[(red) ❯](peach)"
+vimcmd_symbol = "[❮](subtext1)"       # For use with zsh-vi-mode
 
 [git_branch]
 style = "bold mauve"
