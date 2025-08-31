@@ -1,0 +1,5 @@
+font-family = "BerkeleyMono Nerd Font"
+theme = "dark:nightfox,light:dayfox"
+command = "/opt/homebrew/bin/nu --config ~/.config/nushell/config.nu"
+keybind = shift+enter=text:\x1b\r
+
