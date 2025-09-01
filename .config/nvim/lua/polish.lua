@@ -1,5 +1,17 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+vim.api.nvim_create_autocmd("OptionSet", {
+  pattern = "background",
+  callback = function()
+    if vim.o.background == "dark" then
+      vim.cmd("colorscheme astrodark")
+    else
+      vim.cmd("colorscheme astrolight")
+    end
+  end,
+})
 
--- This will run last in the setup process.
--- This is just pure lua so anything that doesn't
--- fit in the normal config locations above can go here
+-- Set initial theme
+if vim.o.background == "dark" then
+  vim.cmd("colorscheme nightfox")
+else
+  vim.cmd("colorscheme dayfox")
+end
