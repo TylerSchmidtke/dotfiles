@@ -38,5 +38,8 @@ def --env night [] {
 
 
 
+# Local Machine
+source ~/.config/nushell/local.nu
+
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
