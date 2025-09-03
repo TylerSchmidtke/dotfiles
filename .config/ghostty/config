@@ -2,4 +2,8 @@ font-family = "BerkeleyMono Nerd Font"
 theme = "dark:nightfox,light:dayfox"
 command = "/opt/homebrew/bin/nu --config ~/.config/nushell/config.nu"
 keybind = shift+enter=text:\x1b\r
-
+background-opacity = 0.95
+background-blur = true
+window-subtitle = false
+title = " "
+macos-titlebar-proxy-icon = hidden
