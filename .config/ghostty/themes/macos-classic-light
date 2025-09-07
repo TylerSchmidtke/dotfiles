@@ -1,0 +1,35 @@
+# vi:ft=conf
+
+# theme: macos-classic-light
+# author: Based on macOS Classic Light by huacnlee
+# description: Light theme inspired by classic macOS with clean, professional colors
+
+# Background and foreground
+background = #ffffff
+foreground = #000000
+
+# Cursor colors
+cursor-color = #000000
+cursor-text = #ffffff
+
+# Selection colors
+selection-background = #C7DEFF
+selection-foreground = #000000
+
+# Color palette (16 colors)
+palette = 0=#000000
+palette = 1=#C5060B
+palette = 2=#277F2B
+palette = 3=#8E7823
+palette = 4=#282BFF
+palette = 5=#AE30C2
+palette = 6=#00767C
+palette = 7=#ffffff
+palette = 8=#4A4A4A
+palette = 9=#D9564E
+palette = 10=#35BD33
+palette = 11=#BDA400
+palette = 12=#5685F4
+palette = 13=#D75CE7
+palette = 14=#20B1C9
+palette = 15=#999999

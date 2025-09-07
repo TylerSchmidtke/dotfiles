@@ -28,9 +28,20 @@ $env.config.buffer_editor = "nvim"
 # Dotfiles
 alias dot = /usr/bin/git --git-dir=$"($nu.home-path)/.cfg/" --work-tree=$"($nu.home-path)"
 
+# Overrides
+alias nu-open = open
+alias open = ^open
+
+# pyenv
+$env.PYENV_ROOT = "~/.pyenv" | path expand
+if (( $"($env.PYENV_ROOT)/bin" | path type ) == "dir") {
+  $env.PATH = $env.PATH | prepend $"($env.PYENV_ROOT)/bin"
+}
+$env.PATH = $env.PATH | prepend $"(pyenv root)/shims"
+
 # Themes
 def --env day [] {
-  source $"($nu.home-path)/.config/nushell/themes/dayfox.nu"
+  source $"($nu.home-path)/.config/nushell/themes/macos-classic-light.nu"
 }
 def --env night [] {
   source $"($nu.home-path)/.config/nushell/themes/nightfox.nu"
