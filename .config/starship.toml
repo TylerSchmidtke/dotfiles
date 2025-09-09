@@ -3,7 +3,7 @@
 
 # Sets user-defined palette
 # Palettes must be defined _after_ this line
-palette = "catppuccin_macchiato"
+palette = "macos_classic_light"
 
 # Prompt layout configuration
 format = """$directory$git_branch$git_status$package$rust$golang$fill$time
@@ -144,6 +144,34 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+
+[palettes.macos_classic_light]
+rosewater = "#C5060B"
+flamingo = "#C5060B"
+pink = "#a440b5"
+mauve = "#6f42c1"
+red = "#C5060B"
+maroon = "#C5060B"
+peach = "#9e7008"
+yellow = "#C99401"
+green = "#036A07"
+teal = "#007fff"
+sky = "#007fff"
+sapphire = "#0433ff"
+blue = "#0433ff"
+lavender = "#1f6ae2"
+text = "#000000"
+subtext1 = "#505050"
+subtext0 = "#929292"
+overlay2 = "#929292"
+overlay1 = "#D9D9D9"
+overlay0 = "#E9E9E9"
+surface2 = "#E9E9E9"
+surface1 = "#F9F9F9"
+surface0 = "#F9F9F9"
+base = "#ffffff"
+mantle = "#F9F9F9"
+crust = "#E9E9E9"
 
 
 [aws]
