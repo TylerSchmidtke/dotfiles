@@ -45,7 +45,7 @@ def --env day [] {
   source $"($nu.home-path)/.config/nushell/themes/macos-classic-light.nu"
 }
 def --env night [] {
-  source $"($nu.home-path)/.config/nushell/themes/nightfox.nu"
+  source $"($nu.home-path)/.config/nushell/themes/macos-classic-dark.nu"
 }
 
 
