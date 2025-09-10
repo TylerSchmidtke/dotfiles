@@ -1,0 +1,35 @@
+# vi:ft=conf
+
+# theme: macos-classic-dark-xcode
+# author: Based on macOS Classic Dark Xcode by huacnlee
+# description: Dark theme inspired by classic macOS Xcode with vibrant colors
+
+# Background and foreground
+background = #131313
+foreground = #E8E4CF
+
+# Cursor colors
+cursor-color = #E8E4CF
+cursor-text = #131313
+
+# Selection colors
+selection-background = #3D6B8E
+selection-foreground = #E8E4CF
+
+# Color palette (16 colors)
+palette = 0=#131313
+palette = 1=#D73737
+palette = 2=#76BA53
+palette = 3=#AE9513
+palette = 4=#3F72E2
+palette = 5=#AE30C2
+palette = 6=#37D0D7
+palette = 7=#E8E4CF
+palette = 8=#3A3A3A
+palette = 9=#E66969
+palette = 10=#9DE478
+palette = 11=#E5C547
+palette = 12=#81A9F6
+palette = 13=#D86DE9
+palette = 14=#69DDE6
+palette = 15=#57564F

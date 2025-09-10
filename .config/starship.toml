@@ -3,7 +3,7 @@
 
 # Sets user-defined palette
 # Palettes must be defined _after_ this line
-palette = "macos_classic_light"
+palette = "macos_classic_dark"
 
 # Prompt layout configuration
 format = """$directory$git_branch$git_status$package$rust$golang$fill$time
@@ -172,6 +172,62 @@ surface0 = "#F9F9F9"
 base = "#ffffff"
 mantle = "#F9F9F9"
 crust = "#E9E9E9"
+
+[palettes.macos_classic_dark]
+rosewater = "#DD6F61"
+flamingo = "#DD6F61"
+pink = "#D86DE9"
+mauve = "#AE30C2"
+red = "#A8473B"
+maroon = "#DD6F61"
+peach = "#E1D797"
+yellow = "#857F5C"
+green = "#76BA53"
+teal = "#3DB6B0"
+sky = "#5BDFD8"
+sapphire = "#3f72e2"
+blue = "#81A9F6"
+lavender = "#81A9F6"
+text = "#CACCCA"
+subtext1 = "#9E9E9E"
+subtext0 = "#7A7A7A"
+overlay2 = "#5C5C5C"
+overlay1 = "#3E3E3E"
+overlay0 = "#2A2A2A"
+surface2 = "#202020"
+surface1 = "#1A1A1A"
+surface0 = "#161616"
+base = "#131313"
+mantle = "#0F0F0F"
+crust = "#0A0A0A"
+
+[palettes.macos_classic_dark_xcode]
+rosewater = "#E66969"
+flamingo = "#E66969"
+pink = "#D86DE9"
+mauve = "#AE30C2"
+red = "#D73737"
+maroon = "#E66969"
+peach = "#AE9513"
+yellow = "#705F00"
+green = "#76BA53"
+teal = "#37D0D7"
+sky = "#69DDE6"
+sapphire = "#3f72e2"
+blue = "#81A9F6"
+lavender = "#81A9F6"
+text = "#E8E4CF"
+subtext1 = "#9E9E9E"
+subtext0 = "#7A7A7A"
+overlay2 = "#5C5C5C"
+overlay1 = "#3E3E3E"
+overlay0 = "#2A2A2A"
+surface2 = "#202020"
+surface1 = "#1A1A1A"
+surface0 = "#161616"
+base = "#131313"
+mantle = "#0F0F0F"
+crust = "#0A0A0A"
 
 
 [aws]
