@@ -14,7 +14,7 @@ let theme = {
   bg1: "#161616"
   bg2: "#1A1A1A"
   bg3: "#202020"
-  bg4: "#5A5A5A"
+  bg4: "#808080"
   fg0: "#CACCCA"
   fg1: "#B0B2B0"
   fg2: "#9E9E9E"
