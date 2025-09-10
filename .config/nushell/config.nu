@@ -42,10 +42,10 @@ $env.PATH = $env.PATH | prepend $"(pyenv root)/shims"
 
 # Themes
 def --env day [] {
-  source $"($nu.home-path)/.config/nushell/themes/macos-classic-light.nu"
+  source $"($nu.home-path)/.config/nushell/themes/github-light-colorblind.nu"
 }
 def --env night [] {
-  source $"($nu.home-path)/.config/nushell/themes/macos-classic-dark.nu"
+  source $"($nu.home-path)/.config/nushell/themes/github-dark-colorblind.nu"
 }
 
 

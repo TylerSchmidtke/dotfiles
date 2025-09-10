@@ -1,5 +1,5 @@
 font-family = "BerkeleyMono Nerd Font"
-theme = "dark:macos-classic-dark,light:macos-classic-light"
+theme = "dark:Github-Dark-Colorblind,light:Github-Light-Colorblind"
 command = "/opt/homebrew/bin/nu --config ~/.config/nushell/config.nu"
 keybind = shift+enter=text:\x1b\r
 background-opacity = 0.95
