@@ -30,8 +30,7 @@ $env.config.buffer_editor = "nvim"
 alias dot = /usr/bin/git --git-dir=$"($nu.home-path)/.cfg/" --work-tree=$"($nu.home-path)"
 
 # Overrides
-alias nu-open = open
-alias open = ^open
+alias mopen = ^open
 
 # pyenv
 $env.PYENV_ROOT = "~/.pyenv" | path expand
