@@ -7,4 +7,4 @@ background-blur = true
 window-subtitle = false
 title = " "
 macos-titlebar-proxy-icon = hidden
-cursor-style = underline
+cursor-style = block_hollow
