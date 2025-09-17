@@ -47,6 +47,11 @@ def --env night [] {
   source $"($nu.home-path)/.config/nushell/themes/github-dark-colorblind.nu"
 }
 
+# Ghostty
+def ghostty-xterm-ssh [string] {
+  infocmp -x xterm-ghostty | ssh $string -- tic -x -
+}
+
 
 
 # Local Machine
