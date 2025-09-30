@@ -52,6 +52,9 @@ def ghostty-xterm-ssh [string] {
   infocmp -x xterm-ghostty | ssh $string -- tic -x -
 }
 
+# Aliases
+alias ssh-no-key = ssh -o PasswordAuthentication=yes -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no
+
 
 
 # Local Machine
