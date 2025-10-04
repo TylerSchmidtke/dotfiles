@@ -74,7 +74,7 @@ $env.config.color_config = {
     foreground: "#24292f"
     cursor: "#24292f"
 }
-$env.config.highlight_resolved_externals = true
+$env.config.highlight_resolved_externals = true 
 $env.config.explore = {
     status_bar_background: { fg: "#24292f", bg: "#d0d7de" },
     command_bar_text: { fg: "#24292f" },

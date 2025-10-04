@@ -55,6 +55,8 @@ def ghostty-xterm-ssh [string] {
 # Aliases
 alias ssh-no-key = ssh -o PasswordAuthentication=yes -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no
 
+# Rustup
+source $"($nu.home-path)/.cargo/env.nu"
 
 
 # Local Machine
@@ -62,3 +64,4 @@ source ~/.config/nushell/local.nu
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+source $"($nu.home-path)/.cargo/env.nu"

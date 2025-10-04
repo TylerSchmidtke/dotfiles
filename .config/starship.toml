@@ -3,7 +3,7 @@
 
 # Sets user-defined palette
 # Palettes must be defined _after_ this line
-palette = "github_dark_colorblind"
+palette = "github_light_colorblind"
 
 # Prompt layout configuration
 format = """$directory$git_branch$git_status$package$rust$golang$fill$time
@@ -396,6 +396,34 @@ surface0 = "#0d1117"
 base = "#0d1117"
 mantle = "#161b22"
 crust = "#30363d"
+
+[palettes.github_light_colorblind]
+rosewater = "#cf222e"
+flamingo = "#a40e26"
+pink = "#bf3989"
+mauve = "#8250df"
+red = "#cf222e"
+maroon = "#a40e26"
+peach = "#fb8500"
+yellow = "#9a6700"
+green = "#1a7f37"
+teal = "#1b7c83"
+sky = "#0969da"
+sapphire = "#0969da"
+blue = "#0969da"
+lavender = "#6639ba"
+text = "#24292f"
+subtext1 = "#57606a"
+subtext0 = "#6e7781"
+overlay2 = "#8c959f"
+overlay1 = "#afb8c1"
+overlay0 = "#d0d7de"
+surface2 = "#d8dee4"
+surface1 = "#f3f4f6"
+surface0 = "#f6f8fa"
+base = "#ffffff"
+mantle = "#f6f8fa"
+crust = "#d0d7de"
 
 
 [aws]
