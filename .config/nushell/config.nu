@@ -54,6 +54,8 @@ def ghostty-xterm-ssh [string] {
 
 # Aliases
 alias ssh-no-key = ssh -o PasswordAuthentication=yes -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no
+alias gha-watch = gh pr checks --watch
+alias gha-failed-logs = gh run view --log-failed
 
 # Rustup
 source $"($nu.home-path)/.cargo/env.nu"
