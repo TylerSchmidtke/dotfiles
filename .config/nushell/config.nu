@@ -21,7 +21,7 @@ $env.config.show_banner = false
 
 # Path
 $env.XDG_CONFIG_HOME = $"($nu.home-path)/.config"
-$env.PATH = ($env.PATH | append "/usr/local/bin" | append "/opt/homebrew/bin" | append $"($nu.home-path)/go/bin")
+$env.PATH = ($env.PATH | append "/usr/local/bin" | append "/opt/homebrew/bin" | append $"($nu.home-path)/go/bin" | append $"($nu.home-path)/.local/bin")
 
 # Editor
 $env.config.buffer_editor = "nvim"
@@ -56,6 +56,9 @@ def ghostty-xterm-ssh [string] {
 alias ssh-no-key = ssh -o PasswordAuthentication=yes -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no
 alias gha-watch = gh pr checks --watch
 alias gha-failed-logs = gh run view --log-failed
+
+
+
 
 # Rustup
 source $"($nu.home-path)/.cargo/env.nu"
