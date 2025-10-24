@@ -3,7 +3,7 @@
 
 # Sets user-defined palette
 # Palettes must be defined _after_ this line
-palette = "github_light_colorblind"
+palette = "github_dark_colorblind"
 
 # Prompt layout configuration
 format = """$directory$git_branch$git_status$package$rust$golang$fill$time

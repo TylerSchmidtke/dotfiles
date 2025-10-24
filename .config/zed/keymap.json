@@ -26,7 +26,7 @@
       "space s w": "pane::DeploySearch",
 
       // Chat with AI
-      "space a c": "assistant::ToggleFocus",
+      "space a c": "agent::ToggleFocus",
       // Go to file with `gf`
       "g f": "editor::OpenExcerpts"
     }
