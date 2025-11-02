@@ -19,8 +19,9 @@ layouts:
   - tall
   - fullscreen
   - bsp
+  - centered-single
+  - floating
   # - tall-right
-  - wide
   # - two-pane
   # - middle-wide
   # - 3column-left
@@ -28,9 +29,8 @@ layouts:
   # - 3column-right
   # - 4column-left
   # - 4column-right
-  - column
+  # - column
   # - row
-  # - floating
   # - widescreen-tall
   # - widescreen-tall-right
 
@@ -142,12 +142,12 @@ swap-screen-cw:
 # Swap the position of the currently focused window with the next window in the list going counter-clockwise.
 swap-ccw:
   mod: mod2
-  key: j
+  key: k
 
 # Swap the position of the currently focused window with the next window in the list going clockwise.
 swap-cw:
   mod: mod2
-  key: k
+  key: j
 
 # Swap the position of the currently focused window with the main window in the list.
 swap-main:
