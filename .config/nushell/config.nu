@@ -20,31 +20,24 @@ $env.config.show_banner = false
 
 
 # Path
-$env.XDG_CONFIG_HOME = $"($nu.home-path)/.config"
-$env.PATH = ($env.PATH | append "/usr/local/bin" | append "/opt/homebrew/bin" | append $"($nu.home-path)/go/bin" | append $"($nu.home-path)/.local/bin")
+$env.XDG_CONFIG_HOME = $"($nu.home-dir)/.config"
+$env.PATH = ($env.PATH | append "/usr/local/bin" | append "/opt/homebrew/bin" | append $"($nu.home-dir)/go/bin" | append $"($nu.home-dir)/.local/bin")
 
 # Editor
 $env.config.buffer_editor = "nvim"
 
 # Dotfiles
-alias dot = /usr/bin/git --git-dir=$"($nu.home-path)/.cfg/" --work-tree=$"($nu.home-path)"
+alias dot = /usr/bin/git --git-dir=$"($nu.home-dir)/.cfg/" --work-tree=$"($nu.home-dir)"
 
 # Overrides
 alias mopen = ^open
 
-# pyenv
-$env.PYENV_ROOT = "~/.pyenv" | path expand
-if (( $"($env.PYENV_ROOT)/bin" | path type ) == "dir") {
-  $env.PATH = $env.PATH | prepend $"($env.PYENV_ROOT)/bin"
-}
-$env.PATH = $env.PATH | prepend $"(pyenv root)/shims"
-
 # Themes
 def --env day [] {
-  source $"($nu.home-path)/.config/nushell/themes/github-light-colorblind.nu"
+  source $"($nu.home-dir)/.config/nushell/themes/github-light-colorblind.nu"
 }
 def --env night [] {
-  source $"($nu.home-path)/.config/nushell/themes/github-dark-colorblind.nu"
+  source $"($nu.home-dir)/.config/nushell/themes/github-dark-colorblind.nu"
 }
 
 # Ghostty
@@ -61,7 +54,7 @@ alias gha-failed-logs = gh run view --log-failed
 
 
 # Rustup
-source $"($nu.home-path)/.cargo/env.nu"
+source $"($nu.home-dir)/.cargo/env.nu"
 
 
 # Local Machine
@@ -69,4 +62,4 @@ source ~/.config/nushell/local.nu
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-source $"($nu.home-path)/.cargo/env.nu"
+source $"($nu.home-dir)/.cargo/env.nu"
