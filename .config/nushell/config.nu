@@ -56,9 +56,12 @@ alias gha-failed-logs = gh run view --log-failed
 # Rustup
 source $"($nu.home-dir)/.cargo/env.nu"
 
-
 # Local Machine
 source ~/.config/nushell/local.nu
+
+# Functions - written to vendor/autoload, available on next shell launch
+mkdir ~/.config/nushell/functions
+glob ~/.config/nushell/functions/*.nu | each { |f| $"source ($f)\n" } | str join | save -f ($nu.data-dir | path join "vendor/autoload/gn-functions.nu")
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")

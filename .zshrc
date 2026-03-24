@@ -115,11 +115,6 @@ source $ZSH/oh-my-zsh.sh
 export GPG_TTY=$(tty)
 
 
-# Aliases
-alias gdb='arm-none-eabi-gdb'
-alias ls='lsd'
-alias vim='nvim'
-
 # Dotfiles repo config
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -128,12 +123,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 eval "$(op completion zsh)"; compdef _op op
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/tylerschmidtke/.juliaup/bin' $path)
-export PATH
 
 # op plugins
 if [ -f /Users/tylerschmidtke/.config/op/plugins ]; then
@@ -147,16 +136,6 @@ export PATH="$PATH:$(brew --prefix)/opt/llvm/bin"
 # ZSH Suggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Podman compose
-export PODMAN_COMPOSE_WARNING_LOGS=false
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# Starship
-eval "$(starship init zsh)"
-
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/tylerschmidtke/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
