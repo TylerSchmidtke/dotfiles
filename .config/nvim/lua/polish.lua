@@ -1,17 +1,7 @@
-vim.api.nvim_create_autocmd("OptionSet", {
-  pattern = "background",
-  callback = function()
-    if vim.o.background == "dark" then
-      vim.cmd("colorscheme astrodark")
-    else
-      vim.cmd("colorscheme astrolight")
-    end
-  end,
-})
+-- This will run last in the setup process.
+-- This is just pure lua so anything that doesn't
+-- fit in the normal config locations above can go here
 
--- Set initial theme
-if vim.o.background == "dark" then
-  vim.cmd("colorscheme nightfox")
-else
-  vim.cmd("colorscheme dayfox")
-end
+-- Configure Nushell as the default terminal shell
+vim.o.shell = "/opt/homebrew/bin/nu"
+vim.o.shellcmdflag = "--config ~/.config/nushell/config.nu -c"

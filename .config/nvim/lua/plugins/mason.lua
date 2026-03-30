@@ -1,3 +1,5 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
 -- Customize Mason
 
 ---@type LazySpec
@@ -11,7 +13,6 @@ return {
       ensure_installed = {
         -- install language servers
         "lua-language-server",
-        "rust-analyzer",
 
         -- install formatters
         "stylua",
