@@ -10,11 +10,22 @@ return {
 
     -- Function to detect and set colorscheme
     local function set_colorscheme_from_system()
-      local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
-      local result = handle:read("*a")
-      handle:close()
+      local is_dark = false
 
-      if result:match("Dark") then
+      if vim.fn.has("mac") == 1 then
+        local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
+        local result = handle:read("*a")
+        handle:close()
+        is_dark = result:match("Dark") ~= nil
+      else
+        -- KDE Plasma: read ColorScheme from kdeglobals
+        local handle = io.popen("kreadconfig6 --group General --key ColorScheme --file kdeglobals 2>/dev/null")
+        local result = handle:read("*a")
+        handle:close()
+        is_dark = result:lower():match("dark") ~= nil
+      end
+
+      if is_dark then
         vim.cmd "colorscheme github_dark_colorblind"
       else
         vim.cmd "colorscheme github_light_colorblind"
