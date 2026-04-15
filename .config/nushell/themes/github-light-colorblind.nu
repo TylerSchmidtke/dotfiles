@@ -6,8 +6,8 @@ $env.config.color_config = {
     header: { fg: "#0969da" attr: "b" }
     empty: "#0969da"
     bool: {
-        true: { fg: "#0969da" }
-        false: { fg: "#9a6700" }
+        "true": { fg: "#0969da" }
+        "false": { fg: "#9a6700" }
     }
     int: "#0550ae"
     filesize: {
