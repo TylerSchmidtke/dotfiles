@@ -67,7 +67,14 @@ if not (which fnm | is-empty) {
 
 
 # Rustup
-source $"($nu.home-dir)/.cargo/env.nu"
+if ($"($nu.home-dir)/.cargo/env.nu" | path exists) {
+    source $"($nu.home-dir)/.cargo/env.nu"
+}
+
+# Default venv
+#if ($"($nu.home-dir)/.venv/bin/activate.nu" | path exists) {
+#    overlay use $"($nu.home-dir)/.venv/bin/activate.nu"
+#}
 
 # Local Machine
 source ~/.config/nushell/local.nu

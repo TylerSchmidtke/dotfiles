@@ -5,6 +5,8 @@ keybind = shift+enter=text:\x1b\r
 background-opacity = 0.95
 background-blur = true
 window-subtitle = false
+window-theme = ghostty
+window-decoration = auto
 title = " "
 macos-titlebar-proxy-icon = hidden
 cursor-style = block_hollow
