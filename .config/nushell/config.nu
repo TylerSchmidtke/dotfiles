@@ -21,7 +21,14 @@ $env.config.show_banner = false
 
 # Path
 $env.XDG_CONFIG_HOME = $"($nu.home-dir)/.config"
-$env.PATH = ($env.PATH | append "/usr/local/bin" | append "/opt/homebrew/bin" | append $"($nu.home-dir)/go/bin" | append $"($nu.home-dir)/.local/bin")
+$env.PATH = (
+  $env.PATH |
+  append "/usr/local/bin" |
+  append "/opt/homebrew/bin" |
+  append $"($nu.home-dir)/go/bin" |
+  append $"($nu.home-dir)/.local/bin" |
+  append $"($nu.home-dir)/.opencode/bin"
+)
 
 # Editor
 $env.config.buffer_editor = "nvim"
