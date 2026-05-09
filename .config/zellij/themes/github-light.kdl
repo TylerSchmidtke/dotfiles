@@ -1,0 +1,15 @@
+themes {
+    github-light {
+        fg "#24292f"
+        bg "#ffffff"
+        black "#24292f"
+        red "#cf222e"
+        green "#1a7f37"
+        yellow "#9a6700"
+        blue "#0969da"
+        magenta "#8250df"
+        cyan "#1b7c83"
+        white "#6e7781"
+        orange "#fb8500"
+    }
+}

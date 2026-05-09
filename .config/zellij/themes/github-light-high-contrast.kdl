@@ -1,0 +1,15 @@
+themes {
+    github-light-high-contrast {
+        fg "#0e1116"
+        bg "#ffffff"
+        black "#0e1116"
+        red "#a0111f"
+        green "#024c1a"
+        yellow "#744500"
+        blue "#023b95"
+        magenta "#622cbc"
+        cyan "#055d20"
+        white "#4b535d"
+        orange "#873800"
+    }
+}

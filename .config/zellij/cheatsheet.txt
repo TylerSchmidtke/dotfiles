@@ -1,0 +1,113 @@
+───────────────────────────────────────────────────────────────────────
+  ZELLIJ KEYBINDINGS              press q to close · Alt+/ to toggle
+───────────────────────────────────────────────────────────────────────
+
+GLOBAL (work in any non-locked mode)
+  Ctrl+G          → lock zellij (then Ctrl+G to unlock)
+  Ctrl+Q          → quit
+  Ctrl+P          → enter PANE mode
+  Ctrl+T          → enter TAB mode
+  Ctrl+N          → enter RESIZE mode
+  Ctrl+S          → enter SCROLL mode
+  Ctrl+H          → enter MOVE mode
+  Ctrl+O          → enter SESSION mode
+  Ctrl+B          → enter TMUX-compat mode
+  Alt+/  Alt+]    → cycle to next swap layout
+  Alt+[           → cycle to previous swap layout
+  Alt+N           → new pane
+  Alt+F           → toggle floating panes
+  Alt+I  Alt+O    → move tab left / right
+  Alt++  Alt+-    → resize increase / decrease
+  Alt+P           → toggle pane in group
+  Alt+Shift+P     → toggle group marking
+
+FOCUS / NAVIGATION (always available)
+  Alt+H J K L     → move focus left/down/up/right (also tab)
+  Alt+← ↓ ↑ →     → same, arrow keys
+
+PANE MODE  (Ctrl+P, then…)
+  h j k l         → move focus
+  d               → new pane below
+  r               → new pane right
+  n               → new pane
+  s               → new stacked pane
+  w               → toggle floating
+  f               → fullscreen toggle
+  z               → toggle pane frames
+  e               → embed / float toggle
+  i               → toggle pinned
+  c               → rename pane
+  p               → switch focus
+  x               → close pane
+  Ctrl+P / Esc    → back to normal
+
+TAB MODE  (Ctrl+T, then…)
+  1-9             → jump to tab N
+  n               → new tab
+  h j k l         → previous / next tab
+  r               → rename tab
+  s               → toggle sync (broadcast input to all panes)
+  b               → break pane to new tab
+  [  ]            → break pane left / right
+  Tab             → toggle to last tab
+  x               → close tab
+  Ctrl+T / Esc    → back to normal
+
+RESIZE MODE  (Ctrl+N, then…)
+  h j k l         → grow toward direction
+  H J K L (shift) → shrink from direction
+  + / =           → increase
+  -               → decrease
+  Ctrl+N / Esc    → back to normal
+
+MOVE MODE  (Ctrl+H, then…)
+  h j k l         → move pane left/down/up/right
+  n               → move pane forward
+  p               → move pane backward
+  Tab             → move pane forward
+  Ctrl+H / Esc    → back to normal
+
+SCROLL MODE  (Ctrl+S, then…)
+  j k             → scroll down / up
+  d u             → half-page down / up
+  Ctrl+F          → page down
+  Ctrl+B          → page up
+  Ctrl+C          → scroll to bottom + exit
+  s               → enter search
+  e               → edit scrollback in $EDITOR
+  Esc             → back to normal
+
+SEARCH MODE  (from scroll: s, then type, Enter)
+  n               → next match (down)
+  p               → previous match (up)
+  c               → toggle case sensitivity
+  w               → toggle whole word
+  o               → toggle wrap-around
+
+SESSION MODE  (Ctrl+O, then…)
+  d               → detach session
+  w               → session manager (switch / kill sessions)
+  l               → layout manager
+  p               → plugin manager
+  c               → configuration UI
+  s               → share session
+  a               → about zellij
+
+TMUX-COMPAT MODE  (Ctrl+B, then…)
+  c               → new tab
+  ,               → rename tab
+  "               → split horizontal (down)
+  %               → split vertical (right)
+  h j k l         → move focus
+  d               → detach
+  o               → next pane
+  x               → close pane
+  z               → fullscreen
+  [               → enter scroll mode
+  space           → next swap layout
+  Ctrl+B          → send literal Ctrl+B
+
+LOCKED MODE
+  Ctrl+G          → unlock (only binding active while locked)
+
+───────────────────────────────────────────────────────────────────────

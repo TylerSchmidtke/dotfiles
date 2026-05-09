@@ -1,0 +1,15 @@
+themes {
+    github-dark-high-contrast {
+        fg "#f0f3f6"
+        bg "#0a0c10"
+        black "#7a828e"
+        red "#ff6a69"
+        green "#09b43a"
+        yellow "#e09b13"
+        blue "#409eff"
+        magenta "#b780ff"
+        cyan "#76e3ea"
+        white "#bdc4cc"
+        orange "#ffb757"
+    }
+}
