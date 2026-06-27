@@ -94,4 +94,3 @@ glob ~/.config/nushell/functions/*.nu | each { |f| $"source ($f)\n" } | str join
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 source $"($nu.home-dir)/.cargo/env.nu"
-source "~/.cargo/env.nu"
