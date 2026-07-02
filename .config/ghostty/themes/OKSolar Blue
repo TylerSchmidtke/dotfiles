@@ -1,0 +1,29 @@
+# theme: OKSolar Blue
+# upstream: https://github.com/dieghernan/oksolar-theme (palette: https://meat.io/oksolar)
+# description: OKSolar with a navy blue background
+
+background = #1A2740
+foreground = #B19F95
+
+cursor-color = #D56500
+cursor-text = #1A2740
+
+selection-background = #B19F95
+selection-foreground = #1A2740
+
+palette = 0=#26334D
+palette = 1=#F23749
+palette = 2=#819500
+palette = 3=#AC8300
+palette = 4=#2B90D8
+palette = 5=#DD459D
+palette = 6=#259D94
+palette = 7=#B19F95
+palette = 8=#646D7F
+palette = 9=#F23749
+palette = 10=#819500
+palette = 11=#AC8300
+palette = 12=#2B90D8
+palette = 13=#DD459D
+palette = 14=#259D94
+palette = 15=#B59E91

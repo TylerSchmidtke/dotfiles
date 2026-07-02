@@ -1,0 +1,29 @@
+# theme: OKSolar Light Colorblind (red-green / deutan-protan safe)
+# upstream: https://meat.io/oksolar — green remapped to blue so `git` add reads
+# distinct from red delete; yellow brightened to gold for lightness separation.
+
+background = #FBF7EF
+foreground = #657377
+
+cursor-color = #D56500
+cursor-text = #FBF7EF
+
+selection-background = #657377
+selection-foreground = #FBF7EF
+
+palette = 0=#5B7279
+palette = 1=#F23749
+palette = 2=#2B90D8
+palette = 3=#C79A26
+palette = 4=#2B90D8
+palette = 5=#DD459D
+palette = 6=#259D94
+palette = 7=#98A8A8
+palette = 8=#657377
+palette = 9=#F23749
+palette = 10=#2B90D8
+palette = 11=#C79A26
+palette = 12=#2B90D8
+palette = 13=#DD459D
+palette = 14=#259D94
+palette = 15=#8FAAAB

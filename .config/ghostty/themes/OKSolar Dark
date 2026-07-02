@@ -1,0 +1,29 @@
+# theme: OKSolar Dark
+# upstream: https://meat.io/oksolar (palette) · https://github.com/dieghernan/oksolar-theme (variants)
+# description: OKSolar dark — a Solarized redesign tuned in the OKLab color space
+
+background = #002D38
+foreground = #98A8A8
+
+cursor-color = #D56500
+cursor-text = #002D38
+
+selection-background = #98A8A8
+selection-foreground = #002D38
+
+palette = 0=#093946
+palette = 1=#F23749
+palette = 2=#819500
+palette = 3=#AC8300
+palette = 4=#2B90D8
+palette = 5=#DD459D
+palette = 6=#259D94
+palette = 7=#98A8A8
+palette = 8=#5B7279
+palette = 9=#F23749
+palette = 10=#819500
+palette = 11=#AC8300
+palette = 12=#2B90D8
+palette = 13=#DD459D
+palette = 14=#259D94
+palette = 15=#8FAAAB

@@ -27,7 +27,8 @@ $env.PATH = (
   append "/opt/homebrew/bin" |
   append $"($nu.home-dir)/go/bin" |
   append $"($nu.home-dir)/.local/bin" |
-  append $"($nu.home-dir)/.opencode/bin"
+  append $"($nu.home-dir)/.opencode/bin" |
+  append $"($nu.home-dir)/.dotnet/tools"
 )
 
 # Editor
@@ -39,12 +40,28 @@ alias dot = /usr/bin/git --git-dir=$"($nu.home-dir)/.cfg/" --work-tree=$"($nu.ho
 # Overrides
 alias mopen = ^open
 
-# Themes
+# Themes — switch nushell + helix + starship together.
+# Palette/theme names match across all three (oksolar_dark/light/sky).
+def set-theme [name: string] {
+  # Helix: rewrite `theme = "..."`, then live-reload open editors (SIGUSR1)
+  let hx_cfg = ($nu.home-dir | path join ".config/helix/config.toml")
+  open --raw $hx_cfg
+  | str replace --regex '(?m)^theme = ".*"' $'theme = "($name)"'
+  | save --force $hx_cfg
+  try { pkill -USR1 -x hx }
+  # Starship: rewrite `palette = "..."` (re-read on next prompt automatically)
+  let ss_cfg = ($nu.home-dir | path join ".config/starship.toml")
+  open --raw $ss_cfg
+  | str replace --regex '(?m)^palette = ".*"' $'palette = "($name)"'
+  | save --force $ss_cfg
+}
 def --env day [] {
-  source $"($nu.home-dir)/.config/nushell/themes/github-light-colorblind.nu"
+  source $"($nu.home-dir)/.config/nushell/themes/oksolar-light.nu"
+  set-theme oksolar_light
 }
 def --env night [] {
-  source $"($nu.home-dir)/.config/nushell/themes/github-dark-colorblind.nu"
+  source $"($nu.home-dir)/.config/nushell/themes/oksolar-dark.nu"
+  set-theme oksolar_dark
 }
 
 # Ghostty
@@ -82,6 +99,20 @@ if ($"($nu.home-dir)/.cargo/env.nu" | path exists) {
 #if ($"($nu.home-dir)/.venv/bin/activate.nu" | path exists) {
 #    overlay use $"($nu.home-dir)/.venv/bin/activate.nu"
 #}
+
+# Easy pause and resume
+$env.config.keybindings ++= [
+  {
+    name: "unfreeze",
+    modifier: control,
+    keycode: "char_z",
+    event: {
+      send: executehostcommand,
+      cmd: "job unfreeze"
+    },
+    mode: emacs
+  }
+]
 
 # Local Machine
 source ~/.config/nushell/local.nu

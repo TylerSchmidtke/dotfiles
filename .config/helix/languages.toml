@@ -1,0 +1,100 @@
+# Language server + debugger configuration for Rust, Go, C#, and GDScript.
+#
+# Most server/adapter names below (rust-analyzer, gopls, dlv, csharp-ls,
+# netcoredbg, lldb-dap) are Helix built-ins — this file mainly pins choices,
+# tweaks settings, and adds the Godot LSP bridge.
+#
+# Verify any language with:  hx --health <rust|go|c-sharp|gdscript>
+
+# LSP: Harper for Grammar
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+
+# ─────────────────────────────  Rust  ─────────────────────────────
+# LSP: rust-analyzer  •  Debugger: lldb-dap  (both Helix defaults)
+[language-server.rust-analyzer.config]
+cargo.features = "all"
+check.command = "clippy" # on-save diagnostics via clippy
+
+[[language]]
+name = "rust"
+auto-format = true # rustfmt on save
+
+# ──────────────────────────────  Go  ──────────────────────────────
+# LSP: gopls  •  Debugger: dlv  (both Helix defaults)
+[language-server.gopls.config]
+gofumpt = true
+
+[language-server.gopls.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = true
+rangeVariableTypes = true
+
+[[language]]
+name = "go"
+auto-format = true # gofmt/gofumpt on save
+
+# ──────────────────────────────  C#  ──────────────────────────────
+[[language]]
+name = "c-sharp"
+language-servers = ["csharp-ls"]
+auto-format = true
+
+# ──────────────────────────  GDScript / Godot  ────────────────────
+# Helix has no native TCP LSP support, so bridge stdio <-> Godot's language
+# server (running inside the editor at 127.0.0.1:6005) with socat.
+#
+# NOTE: the Godot editor must be OPEN with the project loaded, otherwise the
+# server on 6005 isn't listening and Helix will report the LSP as failed.
+[language-server.godot]
+command = "socat"
+args = ["STDIO", "TCP:127.0.0.1:6005"]
+
+[[language]]
+name = "gdscript"
+language-servers = ["godot"]
+# Optional formatter (needs gdtoolkit: `pipx install gdtoolkit`):
+# formatter = { command = "gdformat", args = ["-"] }
+# auto-format = true
+
+# ────────────────────────────  Python  ────────────────────────────
+# Astral toolchain: ruff (lint + format) + ty (type checker / navigation).
+# Both are Helix built-ins; installed as uv tools in ~/.local/bin.
+[[language]]
+name = "python"
+language-servers = ["ty", "ruff"] # ty: types/hover/goto • ruff: lint + format
+auto-format = true                # `ruff format` on save
+
+# ──────────────────────────────  Bash  ────────────────────────────
+# LSP: bash-language-server (npm)  •  Formatter: shfmt
+[[language]]
+name = "bash"
+auto-format = true
+formatter = { command = "shfmt", args = ["-i", "2", "-"] }
+
+# ──────────────────────────────  TOML  ────────────────────────────
+# LSP + formatter: taplo (built-in)
+[[language]]
+name = "toml"
+auto-format = true
+
+# ──────────────────────────────  JSON  ────────────────────────────
+# LSP + formatter: vscode-json-language-server (npm)
+[[language]]
+name = "json"
+auto-format = true
+
+# ──────────────────────────────  YAML  ────────────────────────────
+# LSP: yaml-language-server (npm). Auto-format left off (reflows can be noisy);
+# format on demand with `:format`. Uncomment to enable on save.
+# [[language]]
+# name = "yaml"
+# auto-format = true
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "markdown-oxide", "harper-ls"]

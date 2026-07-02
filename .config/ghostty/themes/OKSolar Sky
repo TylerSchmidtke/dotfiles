@@ -1,0 +1,29 @@
+# theme: OKSolar Sky
+# upstream: https://github.com/dieghernan/oksolar-theme (palette: https://meat.io/oksolar)
+# description: OKSolar with a light sky-blue background
+
+background = #EFF9FE
+foreground = #796E66
+
+cursor-color = #D56500
+cursor-text = #EFF9FE
+
+selection-background = #796E66
+selection-foreground = #EFF9FE
+
+palette = 0=#7A695E
+palette = 1=#F23749
+palette = 2=#819500
+palette = 3=#AC8300
+palette = 4=#2B90D8
+palette = 5=#DD459D
+palette = 6=#259D94
+palette = 7=#98A7A9
+palette = 8=#796E66
+palette = 9=#F23749
+palette = 10=#819500
+palette = 11=#AC8300
+palette = 12=#2B90D8
+palette = 13=#DD459D
+palette = 14=#259D94
+palette = 15=#8FAAAE

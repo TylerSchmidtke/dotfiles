@@ -1,0 +1,48 @@
+theme = "oksolar_light"
+
+[editor]
+bufferline = "multiple"
+color-modes = true
+cursorline = true
+true-color = true
+line-number = "relative"
+
+[editor.lsp]
+display-messages = true            # show LSP status/progress in the statusline
+display-inlay-hints = true         # rust-analyzer / gopls inlay hints
+display-signature-help-docs = true
+snippets = true
+
+[editor.indent-guides]
+render = true
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+]
+right = ["diagnostics", "selections", "position", "file-type"]
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal.space]
+e = [
+  ':sh rm -f /tmp/unique-file-h21a434',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file-h21a434',
+  ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file-h21a434}',
+  ':redraw',
+]
+
+# helix/config.toml
+[keys.normal]
+C-g = [
+  ":write-all",
+  ":insert-output lazygit >/dev/tty",
+  ":redraw",
+  ":reload-all",
+]
