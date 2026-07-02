@@ -34,6 +34,13 @@ $env.PATH = (
 # Editor
 $env.config.buffer_editor = "nvim"
 
+# Lazygit: merge base config + the switchable OKSolar theme (active.yml symlink,
+# re-pointed by `set-theme`). Diff colors still come from the terminal palette.
+$env.LG_CONFIG_FILE = ([
+  ($nu.home-dir | path join ".config/lazygit/config.yml")
+  ($nu.home-dir | path join ".config/lazygit/themes/active.yml")
+] | str join ",")
+
 # Dotfiles
 alias dot = /usr/bin/git --git-dir=$"($nu.home-dir)/.cfg/" --work-tree=$"($nu.home-dir)"
 
@@ -54,6 +61,10 @@ def set-theme [name: string] {
   open --raw $ss_cfg
   | str replace --regex '(?m)^palette = ".*"' $'palette = "($name)"'
   | save --force $ss_cfg
+  # Lazygit: re-point the active theme symlink (picked up on next `lazygit` launch)
+  let lg_theme = ($nu.home-dir | path join $".config/lazygit/themes/($name)_colorblind.yml")
+  let lg_active = ($nu.home-dir | path join ".config/lazygit/themes/active.yml")
+  if ($lg_theme | path exists) { ^ln -sf $lg_theme $lg_active }
 }
 def --env day [] {
   source $"($nu.home-dir)/.config/nushell/themes/oksolar-light.nu"

@@ -1,0 +1,32 @@
+# lazygit theme: OKSolar Dark
+# upstream: https://meat.io/oksolar · https://github.com/dieghernan/oksolar-theme
+# Merge this via LG_CONFIG_FILE (see ~/.config/nushell/config.nu). Diff add/remove
+# colors come from the terminal's ANSI palette, not this file.
+gui:
+  theme:
+    activeBorderColor:
+      - "#2B90D8"
+      - bold
+    inactiveBorderColor:
+      - "#5B7279"
+    searchingActiveBorderColor:
+      - "#AC8300"
+      - bold
+    optionsTextColor:
+      - "#2B90D8"
+    selectedLineBgColor:
+      - "#093946"
+    inactiveViewSelectedLineBgColor:
+      - bold
+    cherryPickedCommitBgColor:
+      - "#259D94"
+    cherryPickedCommitFgColor:
+      - "#FBF7EF"
+    markedBaseCommitBgColor:
+      - "#AC8300"
+    markedBaseCommitFgColor:
+      - "#002D38"
+    unstagedChangesColor:
+      - "#F23749"
+    defaultFgColor:
+      - default

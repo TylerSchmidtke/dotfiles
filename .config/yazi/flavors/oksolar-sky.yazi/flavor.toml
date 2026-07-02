@@ -1,0 +1,184 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+# flavor: OKSolar Sky for Yazi
+# upstream: https://meat.io/oksolar (palette)
+#           https://github.com/dieghernan/oksolar-theme (variants)
+
+# : Manager {{
+
+[mgr]
+cwd = { fg = "#259D94" }
+
+# Find
+find_keyword  = { fg = "#AC8300", bold = true, italic = true, underline = true }
+find_position = { fg = "#D56500", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#819500", bg = "#819500" }
+marker_cut      = { fg = "#F23749", bg = "#F23749" }
+marker_marked   = { fg = "#259D94", bg = "#259D94" }
+marker_selected = { fg = "#AC8300", bg = "#AC8300" }
+
+# Count
+count_copied   = { fg = "#EFF9FE", bg = "#819500" }
+count_cut      = { fg = "#EFF9FE", bg = "#F23749" }
+count_selected = { fg = "#EFF9FE", bg = "#AC8300" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#8FAAAE" }
+
+# : }}
+
+
+# : Tabs {{
+
+[tabs]
+active   = { fg = "#EFF9FE", bg = "#2B90D8", bold = true }
+inactive = { fg = "#2B90D8", bg = "#D4EEF9" }
+
+# : }}
+
+
+# : Mode {{
+
+[mode]
+normal_main = { fg = "#EFF9FE", bg = "#2B90D8", bold = true }
+normal_alt  = { fg = "#2B90D8", bg = "#D4EEF9" }
+
+select_main = { fg = "#EFF9FE", bg = "#259D94", bold = true }
+select_alt  = { fg = "#259D94", bg = "#D4EEF9" }
+
+unset_main  = { fg = "#EFF9FE", bg = "#D56500", bold = true }
+unset_alt   = { fg = "#D56500", bg = "#D4EEF9" }
+
+# : }}
+
+
+# : Status bar {{
+
+[status]
+# Permissions
+perm_sep   = { fg = "#8FAAAE" }
+perm_type  = { fg = "#2B90D8" }
+perm_read  = { fg = "#AC8300" }
+perm_write = { fg = "#F23749" }
+perm_exec  = { fg = "#819500" }
+
+# Progress
+progress_label  = { fg = "#7A695E", bold = true }
+progress_normal = { fg = "#819500", bg = "#D4EEF9" }
+progress_error  = { fg = "#AC8300", bg = "#F23749" }
+
+# : }}
+
+
+# : Pick {{
+
+[pick]
+border   = { fg = "#2B90D8" }
+active   = { fg = "#DD459D", bold = true }
+inactive = {}
+
+# : }}
+
+
+# : Input {{
+
+[input]
+border   = { fg = "#2B90D8" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}
+
+
+# : Completion {{
+
+[cmp]
+border   = { fg = "#2B90D8" }
+active   = { fg = "#DD459D", bold = true }
+inactive = {}
+
+# : }}
+
+
+# : Tasks {{
+
+[tasks]
+border  = { fg = "#2B90D8" }
+title   = {}
+hovered = { fg = "#DD459D", bold = true }
+
+# : }}
+
+
+# : Which {{
+
+[which]
+mask            = { bg = "#D4EEF9" }
+cand            = { fg = "#259D94" }
+rest            = { fg = "#98A7A9" }
+desc            = { fg = "#DD459D" }
+separator       = "  "
+separator_style = { fg = "#8FAAAE" }
+
+# : }}
+
+
+# : Help {{
+
+[help]
+on      = { fg = "#259D94" }
+run     = { fg = "#DD459D" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#EFF9FE", bg = "#796E66" }
+
+# : }}
+
+
+# : Spotter {{
+
+[spot]
+border   = { fg = "#2B90D8" }
+title    = { fg = "#2B90D8" }
+tbl_col  = { fg = "#259D94" }
+tbl_cell = { fg = "#DD459D", bg = "#D4EEF9" }
+
+# : }}
+
+
+# : Notification {{
+
+[notify]
+title_info  = { fg = "#819500" }
+title_warn  = { fg = "#AC8300" }
+title_error = { fg = "#F23749" }
+
+# : }}
+
+
+# : File-specific styles {{
+
+[filetype]
+rules = [
+	# Image
+	{ mime = "image/*", fg = "#259D94" },
+	# Media
+	{ mime = "{audio,video}/*", fg = "#AC8300" },
+	# Archive
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#DD459D" },
+	# Document
+	{ mime = "application/{pdf,doc,rtf}", fg = "#819500" },
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", fg = "#98A7A9" },
+	# Orphan symlink
+	{ url = "*", is = "orphan", fg = "#F23749" },
+	# Executable
+	{ url = "*", is = "exec", fg = "#819500" },
+	# Fallback
+	{ url = "*/", fg = "#2B90D8" },
+	{ url = "*", fg = "#796E66" },
+]
+
+# : }}

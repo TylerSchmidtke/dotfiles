@@ -1,0 +1,6 @@
+# Yazi picks the flavor matching the terminal's reported appearance, so this
+# tracks light/dark automatically (same idea as bat's `--theme=auto`).
+# Colorblind swap: set both to "oksolar-dark-colorblind" / "oksolar-light-colorblind".
+[flavor]
+dark  = "oksolar-dark"
+light = "oksolar-light"

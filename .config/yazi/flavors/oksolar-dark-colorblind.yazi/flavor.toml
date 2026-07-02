@@ -1,0 +1,186 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+# flavor: OKSolar Dark Colorblind for Yazi
+# upstream: https://meat.io/oksolar (palette)
+#           https://github.com/dieghernan/oksolar-theme (variants)
+# note: red-green (deutan/protan) colorblind-safe — green is remapped
+#       to blue and yellow brightened to gold; originals left intact.
+
+# : Manager {{
+
+[mgr]
+cwd = { fg = "#259D94" }
+
+# Find
+find_keyword  = { fg = "#C79A26", bold = true, italic = true, underline = true }
+find_position = { fg = "#D56500", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#2B90D8", bg = "#2B90D8" }
+marker_cut      = { fg = "#F23749", bg = "#F23749" }
+marker_marked   = { fg = "#259D94", bg = "#259D94" }
+marker_selected = { fg = "#C79A26", bg = "#C79A26" }
+
+# Count
+count_copied   = { fg = "#002D38", bg = "#2B90D8" }
+count_cut      = { fg = "#002D38", bg = "#F23749" }
+count_selected = { fg = "#002D38", bg = "#C79A26" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#5B7279" }
+
+# : }}
+
+
+# : Tabs {{
+
+[tabs]
+active   = { fg = "#002D38", bg = "#2B90D8", bold = true }
+inactive = { fg = "#2B90D8", bg = "#093946" }
+
+# : }}
+
+
+# : Mode {{
+
+[mode]
+normal_main = { fg = "#002D38", bg = "#2B90D8", bold = true }
+normal_alt  = { fg = "#2B90D8", bg = "#093946" }
+
+select_main = { fg = "#002D38", bg = "#259D94", bold = true }
+select_alt  = { fg = "#259D94", bg = "#093946" }
+
+unset_main  = { fg = "#002D38", bg = "#D56500", bold = true }
+unset_alt   = { fg = "#D56500", bg = "#093946" }
+
+# : }}
+
+
+# : Status bar {{
+
+[status]
+# Permissions
+perm_sep   = { fg = "#5B7279" }
+perm_type  = { fg = "#2B90D8" }
+perm_read  = { fg = "#C79A26" }
+perm_write = { fg = "#F23749" }
+perm_exec  = { fg = "#2B90D8" }
+
+# Progress
+progress_label  = { fg = "#8FAAAB", bold = true }
+progress_normal = { fg = "#2B90D8", bg = "#093946" }
+progress_error  = { fg = "#C79A26", bg = "#F23749" }
+
+# : }}
+
+
+# : Pick {{
+
+[pick]
+border   = { fg = "#2B90D8" }
+active   = { fg = "#DD459D", bold = true }
+inactive = {}
+
+# : }}
+
+
+# : Input {{
+
+[input]
+border   = { fg = "#2B90D8" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}
+
+
+# : Completion {{
+
+[cmp]
+border   = { fg = "#2B90D8" }
+active   = { fg = "#DD459D", bold = true }
+inactive = {}
+
+# : }}
+
+
+# : Tasks {{
+
+[tasks]
+border  = { fg = "#2B90D8" }
+title   = {}
+hovered = { fg = "#DD459D", bold = true }
+
+# : }}
+
+
+# : Which {{
+
+[which]
+mask            = { bg = "#093946" }
+cand            = { fg = "#259D94" }
+rest            = { fg = "#657377" }
+desc            = { fg = "#DD459D" }
+separator       = "  "
+separator_style = { fg = "#5B7279" }
+
+# : }}
+
+
+# : Help {{
+
+[help]
+on      = { fg = "#259D94" }
+run     = { fg = "#DD459D" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#002D38", bg = "#98A8A8" }
+
+# : }}
+
+
+# : Spotter {{
+
+[spot]
+border   = { fg = "#2B90D8" }
+title    = { fg = "#2B90D8" }
+tbl_col  = { fg = "#259D94" }
+tbl_cell = { fg = "#DD459D", bg = "#093946" }
+
+# : }}
+
+
+# : Notification {{
+
+[notify]
+title_info  = { fg = "#2B90D8" }
+title_warn  = { fg = "#C79A26" }
+title_error = { fg = "#F23749" }
+
+# : }}
+
+
+# : File-specific styles {{
+
+[filetype]
+rules = [
+	# Image
+	{ mime = "image/*", fg = "#259D94" },
+	# Media
+	{ mime = "{audio,video}/*", fg = "#C79A26" },
+	# Archive
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#DD459D" },
+	# Document
+	{ mime = "application/{pdf,doc,rtf}", fg = "#2B90D8" },
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", fg = "#657377" },
+	# Orphan symlink
+	{ url = "*", is = "orphan", fg = "#F23749" },
+	# Executable
+	{ url = "*", is = "exec", fg = "#2B90D8" },
+	# Fallback
+	{ url = "*/", fg = "#2B90D8" },
+	{ url = "*", fg = "#98A8A8" },
+]
+
+# : }}

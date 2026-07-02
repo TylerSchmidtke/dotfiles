@@ -1,5 +1,5 @@
 font-family = "BerkeleyMono Nerd Font"
-theme = "dark:OKSolar Dark,light:OKSolar Light"
+theme = "dark:OKSolar Dark Colorblind,light:OKSolar Light Colorblind"
 # Auto-bump any near-invisible text to a legible contrast ratio (1 = off).
 minimum-contrast = 1.1
 command = "/usr/local/bin/nu --config ~/.config/nushell/config.nu"

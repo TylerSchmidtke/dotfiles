@@ -1,0 +1,10 @@
+# bat auto-detects the terminal's light/dark background and picks the matching
+# OKSolar theme. This also fixes paru's PKGBUILD/LICENSE review, which pipes
+# through bat. Override for one call with `bat --theme="OKSolar Sky" ...`.
+#
+# `auto:always` forces the terminal-background query even when bat's output is
+# redirected/piped (e.g. paru captures bat and shows it in less) — without it,
+# bat can't detect light/dark in a pipe and falls back to the dark theme.
+--theme="auto:always"
+--theme-dark="OKSolar Dark"
+--theme-light="OKSolar Light"

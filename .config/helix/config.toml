@@ -1,4 +1,4 @@
-theme = "oksolar_light"
+theme = "oksolar_dark"
 
 [editor]
 bufferline = "multiple"
