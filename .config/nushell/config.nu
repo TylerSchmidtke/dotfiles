@@ -27,6 +27,7 @@ $env.PATH = (
   append "/opt/homebrew/bin" |
   append $"($nu.home-dir)/go/bin" |
   append $"($nu.home-dir)/.local/bin" |
+  append $"/opt/homebrew/opt/llvm/bin" |
   append $"($nu.home-dir)/.opencode/bin" |
   append $"($nu.home-dir)/.dotnet/tools"
 )

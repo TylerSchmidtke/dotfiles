@@ -1,4 +1,4 @@
-theme = "oksolar_dark"
+theme = "oksolar_light"
 
 [editor]
 bufferline = "multiple"
@@ -37,12 +37,16 @@ e = [
   ':open %sh{cat /tmp/unique-file-h21a434}',
   ':redraw',
 ]
+m = [
+  ':write',
+  ':insert-output mdterm "$(echo "%{buffer_name}" | sed "s|^~|$HOME|")" >/dev/tty',
+  ':redraw',
+]
 
-# helix/config.toml
 [keys.normal]
 C-g = [
   ":write-all",
-  ":insert-output lazygit >/dev/tty",
+  ':insert-output cd "$(dirname "$(echo "%{buffer_name}" | sed "s|^~|$HOME|")")" && lazygit >/dev/tty',
   ":redraw",
   ":reload-all",
 ]
