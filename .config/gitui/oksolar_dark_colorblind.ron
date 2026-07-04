@@ -1,0 +1,27 @@
+// OKSolar Dark (colorblind) for gitui
+// Palette: https://meat.io/oksolar
+// Colorblind variant: keyword/add family shifted from green -> orange,
+// yellow brightened, matching Helix oksolar_dark_colorblind.toml.
+(
+    selected_tab: Some("#D56500"),
+    command_fg: Some("#98A8A8"),
+    selection_bg: Some("#657377"),
+    selection_fg: Some("#98A8A8"),
+    cmdbar_bg: Some("#093946"),
+    disabled_fg: Some("#5B7279"),
+    diff_line_add: Some("#D56500"),
+    diff_line_delete: Some("#F23749"),
+    diff_file_added: Some("#D56500"),
+    diff_file_removed: Some("#F23749"),
+    diff_file_moved: Some("#7D80D1"),
+    diff_file_modified: Some("#C79A26"),
+    commit_hash: Some("#DD459D"),
+    commit_time: Some("#259D94"),
+    commit_author: Some("#D56500"),
+    danger_fg: Some("#F23749"),
+    push_gauge_bg: Some("#2B90D8"),
+    push_gauge_fg: Some("#002D38"),
+    tag_fg: Some("#DD459D"),
+    branch_fg: Some("#2B90D8"),
+    block_title_focused: Some("#D56500"),
+)

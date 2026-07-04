@@ -1,0 +1,26 @@
+// GitHub Light Colorblind for gitui
+// Palette: GitHub's official colorblind-safe light theme
+// (matches Helix/mdterm github_light_colorblind and Ghostty's ANSI mapping).
+(
+    selected_tab: Some("#0550ae"),
+    command_fg: Some("#24292f"),
+    selection_bg: Some("#d0d7de"),
+    selection_fg: Some("#24292f"),
+    cmdbar_bg: Some("#f6f8fa"),
+    disabled_fg: Some("#57606a"),
+    diff_line_add: Some("#0969da"),
+    diff_line_delete: Some("#b35900"),
+    diff_file_added: Some("#0969da"),
+    diff_file_removed: Some("#b35900"),
+    diff_file_moved: Some("#6639ba"),
+    diff_file_modified: Some("#9a6700"),
+    commit_hash: Some("#8250df"),
+    commit_time: Some("#1b7c83"),
+    commit_author: Some("#0969da"),
+    danger_fg: Some("#b35900"),
+    push_gauge_bg: Some("#0550ae"),
+    push_gauge_fg: Some("#ffffff"),
+    tag_fg: Some("#8250df"),
+    branch_fg: Some("#0550ae"),
+    block_title_focused: Some("#0550ae"),
+)

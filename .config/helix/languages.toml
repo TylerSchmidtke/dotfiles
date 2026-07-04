@@ -11,6 +11,13 @@
 command = "harper-ls"
 args = ["--stdio"]
 
+# harper-ls requires the settings blob to be an object with a nested
+# "harper-ls" key (see harper-ls/src/config.rs Config::from_lsp_config) —
+# without this Helix sends `null`/`{}` and harper-ls bails continuously,
+# spamming the log and triggering redraws that raced with other TUI output.
+[language-server.harper-ls.config]
+"harper-ls" = {}
+
 # ─────────────────────────────  Rust  ─────────────────────────────
 # LSP: rust-analyzer  •  Debugger: lldb-dap  (both Helix defaults)
 [language-server.rust-analyzer.config]
@@ -60,6 +67,25 @@ language-servers = ["godot"]
 # Optional formatter (needs gdtoolkit: `pipx install gdtoolkit`):
 # formatter = { command = "gdformat", args = ["-"] }
 # auto-format = true
+
+# DAP: Godot's editor exposes its own debug adapter at 127.0.0.1:6006
+# whenever a project is open (Editor Settings > Network > Debug Adapter).
+# Same "attach only" model as the LSP bridge above — nothing to spawn, Helix
+# just connects — so the editor must already be open with the project
+# loaded. Start a session with:
+#   :debug-remote 127.0.0.1:6006 launch      (alias: :dbg-tcp)
+# This plays the project's main scene, same as nvim-dap's "Launch scene"
+# config. `project` is deliberately omitted from args: Godot only uses it to
+# validate against the already-open project's path, and a relative path here
+# would resolve against the Godot editor's cwd, not Helix's.
+[language.debugger]
+name = "godot"
+transport = "tcp"
+
+[[language.debugger.templates]]
+name = "launch"
+request = "launch"
+args = {}
 
 # ────────────────────────────  Python  ────────────────────────────
 # Astral toolchain: ruff (lint + format) + ty (type checker / navigation).

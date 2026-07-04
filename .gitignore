@@ -1,3 +1,4 @@
 .cfg
 .config/nushell/local.nu
 .claude
+./config/nushell/history.txt

@@ -1,4 +1,4 @@
-theme = "oksolar_light"
+theme = "oksolar_dark"
 
 [editor]
 bufferline = "multiple"
@@ -39,9 +39,16 @@ e = [
 ]
 m = [
   ':write',
-  ':insert-output mdterm "$(echo "%{buffer_name}" | sed "s|^~|$HOME|")" >/dev/tty',
+  ':insert-output mdterm --theme "$(cat "$HOME/.cache/helix/current-theme" 2>/dev/null || sed -n "s/^theme *= *\"\(.*\)\"/\1/p" "$HOME/.config/helix/config.toml" | head -n1)" "$(echo "%{buffer_name}" | sed "s|^~|$HOME|")" >/dev/tty',
   ':redraw',
 ]
+
+[keys.normal.space.t]
+l = [':theme oksolar_light', ':sh echo oksolar_light > "$HOME/.cache/helix/current-theme"']
+d = [':theme oksolar_dark', ':sh echo oksolar_dark > "$HOME/.cache/helix/current-theme"']
+L = [':theme oksolar_light_colorblind', ':sh echo oksolar_light_colorblind > "$HOME/.cache/helix/current-theme"']
+D = [':theme oksolar_dark_colorblind', ':sh echo oksolar_dark_colorblind > "$HOME/.cache/helix/current-theme"']
+s = [':theme oksolar_sky', ':sh echo oksolar_sky > "$HOME/.cache/helix/current-theme"']
 
 [keys.normal]
 C-g = [

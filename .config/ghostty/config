@@ -10,3 +10,6 @@ window-decoration = auto
 title = " "
 macos-titlebar-proxy-icon = hidden
 cursor-style = block_hollow
+keybind = global:cmd+backquote=toggle_quick_terminal
+quick-terminal-size = 60%
+quick-terminal-position = center

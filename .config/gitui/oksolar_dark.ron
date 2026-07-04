@@ -1,0 +1,26 @@
+// OKSolar Dark for gitui
+// Palette: https://meat.io/oksolar
+// Canonical OKSolar variant (matches Helix oksolar_dark.toml).
+(
+    selected_tab: Some("#D56500"),
+    command_fg: Some("#98A8A8"),
+    selection_bg: Some("#657377"),
+    selection_fg: Some("#98A8A8"),
+    cmdbar_bg: Some("#093946"),
+    disabled_fg: Some("#5B7279"),
+    diff_line_add: Some("#819500"),
+    diff_line_delete: Some("#F23749"),
+    diff_file_added: Some("#819500"),
+    diff_file_removed: Some("#F23749"),
+    diff_file_moved: Some("#7D80D1"),
+    diff_file_modified: Some("#AC8300"),
+    commit_hash: Some("#DD459D"),
+    commit_time: Some("#259D94"),
+    commit_author: Some("#819500"),
+    danger_fg: Some("#F23749"),
+    push_gauge_bg: Some("#2B90D8"),
+    push_gauge_fg: Some("#002D38"),
+    tag_fg: Some("#DD459D"),
+    branch_fg: Some("#2B90D8"),
+    block_title_focused: Some("#D56500"),
+)
