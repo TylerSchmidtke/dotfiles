@@ -124,3 +124,7 @@ auto-format = true
 [[language]]
 name = "markdown"
 language-servers = ["marksman", "markdown-oxide", "harper-ls"]
+
+[[language]]
+name = "mail"
+language-servers = ["harper-ls"]

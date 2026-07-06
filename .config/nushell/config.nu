@@ -33,7 +33,8 @@ $env.PATH = (
 )
 
 # Editor
-$env.config.buffer_editor = "nvim"
+$env.config.buffer_editor = "hx"
+$env.EDITOR = "hx"
 
 # Lazygit: merge base config + the switchable OKSolar theme (active.yml symlink,
 # re-pointed by `set-theme`). Diff colors still come from the terminal palette.
