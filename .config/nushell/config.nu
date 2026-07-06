@@ -68,12 +68,12 @@ def set-theme [name: string] {
   if ($lg_theme | path exists) { ^ln -sf $lg_theme $lg_active }
 }
 def --env day [] {
-  source $"($nu.home-dir)/.config/nushell/themes/oksolar-light.nu"
-  set-theme oksolar_light
+  source $"($nu.home-dir)/.config/nushell/themes/github-light-colorblind.nu"
+  set-theme github_light_colorblind
 }
 def --env night [] {
-  source $"($nu.home-dir)/.config/nushell/themes/oksolar-dark.nu"
-  set-theme oksolar_dark
+  source $"($nu.home-dir)/.config/nushell/themes/github-dark-colorblind.nu"
+  set-theme github_dark_colorblind
 }
 
 # Ghostty
@@ -125,6 +125,17 @@ $env.config.keybindings ++= [
     mode: emacs
   }
 ]
+
+# Yazi file management
+def --env y [...args] {
+	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+	^yazi ...$args --cwd-file $tmp
+	let cwd = (open $tmp)
+	if $cwd != $env.PWD and ($cwd | path exists) {
+		cd $cwd
+	}
+	rm -fp $tmp
+}
 
 # Local Machine
 source ~/.config/nushell/local.nu

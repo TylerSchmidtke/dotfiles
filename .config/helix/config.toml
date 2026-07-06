@@ -1,4 +1,4 @@
-theme = "oksolar_dark"
+theme = "github_light_colorblind"
 
 [editor]
 bufferline = "multiple"
@@ -44,11 +44,8 @@ m = [
 ]
 
 [keys.normal.space.t]
-l = [':theme oksolar_light', ':sh echo oksolar_light > "$HOME/.cache/helix/current-theme"']
-d = [':theme oksolar_dark', ':sh echo oksolar_dark > "$HOME/.cache/helix/current-theme"']
-L = [':theme oksolar_light_colorblind', ':sh echo oksolar_light_colorblind > "$HOME/.cache/helix/current-theme"']
-D = [':theme oksolar_dark_colorblind', ':sh echo oksolar_dark_colorblind > "$HOME/.cache/helix/current-theme"']
-s = [':theme oksolar_sky', ':sh echo oksolar_sky > "$HOME/.cache/helix/current-theme"']
+l = [':theme github_light_colorblind', ':sh echo github_light_colorblind > "$HOME/.cache/helix/current-theme"']
+d = [':theme github_dark_colorblind', ':sh echo github_dark_colorblind > "$HOME/.cache/helix/current-theme"']
 
 [keys.normal]
 C-g = [
