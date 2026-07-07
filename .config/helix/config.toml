@@ -42,6 +42,7 @@ m = [
   ':insert-output mdterm --theme "$(cat "$HOME/.cache/helix/current-theme" 2>/dev/null || sed -n "s/^theme *= *\"\(.*\)\"/\1/p" "$HOME/.config/helix/config.toml" | head -n1)" "$(echo "%{buffer_name}" | sed "s|^~|$HOME|")" >/dev/tty',
   ':redraw',
 ]
+l = ':sh f=$(echo "%{buffer_name}" | sed "s|^~|$HOME|"); cd "$(dirname "$f")" || exit 1; s=%{selection_line_start}; e=%{selection_line_end}; if [ "$s" = "$e" ]; then r=$s; else r="$s-$e"; fi; url=$(gh browse "$(basename "$f"):$r" --no-browser --commit=$(git rev-parse HEAD)) && echo "$url" | tr -d "\n" | pbcopy && echo "Copied $url"'
 
 [keys.normal.space.t]
 l = [':theme github_light_colorblind', ':sh echo github_light_colorblind > "$HOME/.cache/helix/current-theme"']
@@ -54,3 +55,6 @@ C-g = [
   ":redraw",
   ":reload-all",
 ]
+
+[keys.select.space]
+l = ':sh f=$(echo "%{buffer_name}" | sed "s|^~|$HOME|"); cd "$(dirname "$f")" || exit 1; s=%{selection_line_start}; e=%{selection_line_end}; if [ "$s" = "$e" ]; then r=$s; else r="$s-$e"; fi; url=$(gh browse "$(basename "$f"):$r" --no-browser --commit=$(git rev-parse HEAD)) && echo "$url" | tr -d "\n" | pbcopy && echo "Copied $url"'

@@ -49,8 +49,8 @@ alias dot = /usr/bin/git --git-dir=$"($nu.home-dir)/.cfg/" --work-tree=$"($nu.ho
 # Overrides
 alias mopen = ^open
 
-# Themes — switch nushell + helix + starship together.
-# Palette/theme names match across all three (oksolar_dark/light/sky).
+# Themes — switch nushell + helix + starship + lazygit + aerc + gitui + tuicr together.
+# Palette/theme names match across all of them (e.g. github_dark_colorblind).
 def set-theme [name: string] {
   # Helix: rewrite `theme = "..."`, then live-reload open editors (SIGUSR1)
   let hx_cfg = ($nu.home-dir | path join ".config/helix/config.toml")
@@ -67,6 +67,26 @@ def set-theme [name: string] {
   let lg_theme = ($nu.home-dir | path join $".config/lazygit/themes/($name)_colorblind.yml")
   let lg_active = ($nu.home-dir | path join ".config/lazygit/themes/active.yml")
   if ($lg_theme | path exists) { ^ln -sf $lg_theme $lg_active }
+  # gitui: re-point the active theme.ron symlink (picked up on next `gitui` launch)
+  let gitui_theme = ($nu.home-dir | path join $".config/gitui/($name).ron")
+  let gitui_active = ($nu.home-dir | path join ".config/gitui/theme.ron")
+  if ($gitui_theme | path exists) { ^ln -sf $gitui_theme $gitui_active }
+  # aerc: rewrite `styleset-name=...` (aerc reads it on next launch)
+  let aerc_cfg = ($nu.home-dir | path join ".config/aerc/aerc.conf")
+  let aerc_styleset = ($nu.home-dir | path join $".config/aerc/stylesets/($name)")
+  if ($aerc_styleset | path exists) and ($aerc_cfg | path exists) {
+    open --raw $aerc_cfg
+    | str replace --regex '(?m)^#?styleset-name=.*' $'styleset-name=($name)'
+    | save --force $aerc_cfg
+  }
+  # tuicr: rewrite `theme = "..."` in config.toml (tuicr reads it on next launch)
+  let tuicr_cfg = ($nu.home-dir | path join ".config/tuicr/config.toml")
+  let tuicr_theme = ($nu.home-dir | path join $".config/tuicr/themes/($name).toml")
+  if ($tuicr_theme | path exists) and ($tuicr_cfg | path exists) {
+    open --raw $tuicr_cfg
+    | str replace --regex '(?m)^theme = ".*"' $'theme = "($name)"'
+    | save --force $tuicr_cfg
+  }
 }
 def --env day [] {
   source $"($nu.home-dir)/.config/nushell/themes/github-light-colorblind.nu"
