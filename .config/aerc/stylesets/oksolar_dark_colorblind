@@ -1,0 +1,129 @@
+# vim: ft=dosini
+#
+# aerc styleset — OKSolar Dark Colorblind
+# Auto-generated to match the ghostty theme "OKSolar Dark Colorblind"
+# (~/.config/ghostty/themes/OKSolar Dark Colorblind). See aerc-stylesets(7).
+
+*.default=true
+*.normal=true
+*.fg=#98A8A8
+*.bg=#002D38
+
+# Cursor / selected row — uses the theme's terminal selection pair
+*.selected.fg=#002D38
+*.selected.bg=#98A8A8
+
+# Status messages
+error.fg=#F23749
+error.bold=true
+warning.fg=#C79A26
+success.fg=#2B90D8
+
+# Title bars & section headers
+title.fg=#002D38
+title.bg=#2B90D8
+title.bold=true
+header.fg=#2B90D8
+header.bold=true
+
+# Panel borders
+border.fg=#5B7279
+border.bg=#002D38
+
+# Status line (bottom bar)
+statusline_default.fg=#002D38
+statusline_default.bg=#98A8A8
+statusline_error.fg=#002D38
+statusline_error.bg=#F23749
+statusline_success.fg=#002D38
+statusline_success.bg=#2B90D8
+
+# Directory (folder) list
+dirlist_default.fg=#98A8A8
+dirlist_unread.fg=#2B90D8
+dirlist_unread.bold=true
+dirlist_recent.fg=#2B90D8
+
+# Message list
+msglist_default.fg=#98A8A8
+msglist_unread.fg=#2B90D8
+msglist_unread.bold=true
+msglist_unread.selected.fg=#002D38
+msglist_unread.selected.bg=#2B90D8
+msglist_flagged.fg=#D56500
+msglist_flagged.bold=true
+msglist_deleted.fg=#5B7279
+msglist_deleted.dim=true
+msglist_marked.fg=#002D38
+msglist_marked.bg=#D56500
+msglist_marked.selected.fg=#002D38
+msglist_marked.selected.bg=#D56500
+msglist_result.fg=#C79A26
+msglist_result.bold=true
+msglist_thread_folded.fg=#2B90D8
+msglist_thread_context.fg=#5B7279
+msglist_thread_context.dim=true
+msglist_thread_orphan.fg=#C79A26
+msglist_gutter.bg=#002D38
+msglist_pill.fg=#002D38
+msglist_pill.bg=#2B90D8
+
+# Attachment / part switcher
+part_switcher.bg=#002D38
+part_filename.fg=#98A8A8
+part_mimetype.fg=#5B7279
+
+# Command completion popover
+completion_default.fg=#002D38
+completion_default.bg=#98A8A8
+completion_default.selected.fg=#002D38
+completion_default.selected.bg=#2B90D8
+completion_gutter.bg=#98A8A8
+completion_pill.fg=#002D38
+completion_pill.bg=#2B90D8
+completion_description.fg=#5B7279
+
+# Tab bar
+tab.fg=#5B7279
+tab.bg=#002D38
+tab.selected.fg=#002D38
+tab.selected.bg=#2B90D8
+tab.selected.bold=true
+
+# Selector dialogs
+selector_default.fg=#98A8A8
+selector_focused.fg=#002D38
+selector_focused.bg=#2B90D8
+selector_chooser.fg=#2B90D8
+selector_chooser.bold=true
+
+# Loading spinner
+spinner.fg=#2B90D8
+
+[viewer]
+*.default=true
+*.normal=true
+*.fg=#98A8A8
+*.bg=#002D38
+
+header.fg=#DD459D
+header.bold=true
+signature.fg=#5B7279
+signature.dim=true
+url.fg=#2B90D8
+url.underline=true
+
+diff_meta.fg=#98A8A8
+diff_meta.bold=true
+diff_chunk.fg=#259D94
+diff_chunk_func.fg=#259D94
+diff_chunk_func.dim=true
+diff_add.fg=#2B90D8
+diff_del.fg=#F23749
+
+quote_1.fg=#2B90D8
+quote_2.fg=#259D94
+quote_3.fg=#DD459D
+quote_4.fg=#DD459D
+quote_x.fg=#5B7279
+quote_x.dim=true

@@ -1,0 +1,129 @@
+# vim: ft=dosini
+#
+# aerc styleset — Github Dark Colorblind
+# Auto-generated to match the ghostty theme "Github Dark Colorblind"
+# (~/.config/ghostty/themes/Github Dark Colorblind). See aerc-stylesets(7).
+
+*.default=true
+*.normal=true
+*.fg=#c9d1d9
+*.bg=#0d1117
+
+# Cursor / selected row — uses the theme's terminal selection pair
+*.selected.fg=#0d1117
+*.selected.bg=#c9d1d9
+
+# Status messages
+error.fg=#ec8e2c
+error.bold=true
+warning.fg=#d29922
+success.fg=#58a6ff
+
+# Title bars & section headers
+title.fg=#0d1117
+title.bg=#58a6ff
+title.bold=true
+header.fg=#58a6ff
+header.bold=true
+
+# Panel borders
+border.fg=#6e7681
+border.bg=#0d1117
+
+# Status line (bottom bar)
+statusline_default.fg=#0d1117
+statusline_default.bg=#c9d1d9
+statusline_error.fg=#0d1117
+statusline_error.bg=#ec8e2c
+statusline_success.fg=#0d1117
+statusline_success.bg=#58a6ff
+
+# Directory (folder) list
+dirlist_default.fg=#c9d1d9
+dirlist_unread.fg=#58a6ff
+dirlist_unread.bold=true
+dirlist_recent.fg=#58a6ff
+
+# Message list
+msglist_default.fg=#c9d1d9
+msglist_unread.fg=#58a6ff
+msglist_unread.bold=true
+msglist_unread.selected.fg=#0d1117
+msglist_unread.selected.bg=#58a6ff
+msglist_flagged.fg=#bc8cff
+msglist_flagged.bold=true
+msglist_deleted.fg=#6e7681
+msglist_deleted.dim=true
+msglist_marked.fg=#0d1117
+msglist_marked.bg=#bc8cff
+msglist_marked.selected.fg=#0d1117
+msglist_marked.selected.bg=#bc8cff
+msglist_result.fg=#d29922
+msglist_result.bold=true
+msglist_thread_folded.fg=#58a6ff
+msglist_thread_context.fg=#6e7681
+msglist_thread_context.dim=true
+msglist_thread_orphan.fg=#d29922
+msglist_gutter.bg=#0d1117
+msglist_pill.fg=#0d1117
+msglist_pill.bg=#58a6ff
+
+# Attachment / part switcher
+part_switcher.bg=#0d1117
+part_filename.fg=#c9d1d9
+part_mimetype.fg=#6e7681
+
+# Command completion popover
+completion_default.fg=#0d1117
+completion_default.bg=#c9d1d9
+completion_default.selected.fg=#0d1117
+completion_default.selected.bg=#58a6ff
+completion_gutter.bg=#c9d1d9
+completion_pill.fg=#0d1117
+completion_pill.bg=#58a6ff
+completion_description.fg=#6e7681
+
+# Tab bar
+tab.fg=#6e7681
+tab.bg=#0d1117
+tab.selected.fg=#0d1117
+tab.selected.bg=#58a6ff
+tab.selected.bold=true
+
+# Selector dialogs
+selector_default.fg=#c9d1d9
+selector_focused.fg=#0d1117
+selector_focused.bg=#58a6ff
+selector_chooser.fg=#58a6ff
+selector_chooser.bold=true
+
+# Loading spinner
+spinner.fg=#58a6ff
+
+[viewer]
+*.default=true
+*.normal=true
+*.fg=#c9d1d9
+*.bg=#0d1117
+
+header.fg=#bc8cff
+header.bold=true
+signature.fg=#6e7681
+signature.dim=true
+url.fg=#39c5cf
+url.underline=true
+
+diff_meta.fg=#c9d1d9
+diff_meta.bold=true
+diff_chunk.fg=#39c5cf
+diff_chunk_func.fg=#39c5cf
+diff_chunk_func.dim=true
+diff_add.fg=#58a6ff
+diff_del.fg=#ec8e2c
+
+quote_1.fg=#58a6ff
+quote_2.fg=#39c5cf
+quote_3.fg=#bc8cff
+quote_4.fg=#bc8cff
+quote_x.fg=#6e7681
+quote_x.dim=true
