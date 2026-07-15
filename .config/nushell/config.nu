@@ -169,3 +169,19 @@ glob ~/.config/nushell/functions/*.nu | each { |f| $"source ($f)\n" } | str join
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 source $"($nu.home-dir)/.cargo/env.nu"
+
+# Completions
+source ~/.config/nushell/nu_scripts/custom-completions/git/git-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/docker/docker-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/jj/jj-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/cargo/cargo-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/make/make-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/claude/claude-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/curl/curl-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/gh/gh-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/pnpm/pnpm-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/rg/rg-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/rustup/rustup-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/npm/npm-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/tcpdump/tcpdump-completions.nu
+
