@@ -1,3 +1,0 @@
-[submodule ".config/wezterm/wezterm-session-manager"]
-	path = .config/wezterm/wezterm-session-manager
-	url = git@github.com:danielcopper/wezterm-session-manager.git
