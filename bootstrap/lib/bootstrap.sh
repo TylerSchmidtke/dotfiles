@@ -450,6 +450,7 @@ install_dnf_packages() {
     ca-certificates
     chafa
     curl
+    nushell
     fd-find
     ffmpeg
     file
@@ -463,7 +464,6 @@ install_dnf_packages() {
     lua
     nodejs
     npm
-    nushell
     openssh-clients
     pkgconf-pkg-config
     poppler-utils
