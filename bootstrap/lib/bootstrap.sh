@@ -463,6 +463,7 @@ install_dnf_packages() {
     lua
     nodejs
     npm
+    nushell
     openssh-clients
     pkgconf-pkg-config
     poppler-utils
