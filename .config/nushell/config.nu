@@ -29,7 +29,8 @@ $env.PATH = (
   append $"($nu.home-dir)/.local/bin" |
   append $"/opt/homebrew/opt/llvm/bin" |
   append $"($nu.home-dir)/.opencode/bin" |
-  append $"($nu.home-dir)/.dotnet/tools"
+  append $"($nu.home-dir)/.dotnet/tools" |
+  append $"($nu.home-dir/.radicle/bin)"
 )
 
 # Editor
@@ -184,4 +185,3 @@ source ~/.config/nushell/nu_scripts/custom-completions/rg/rg-completions.nu
 source ~/.config/nushell/nu_scripts/custom-completions/rustup/rustup-completions.nu
 source ~/.config/nushell/nu_scripts/custom-completions/npm/npm-completions.nu
 source ~/.config/nushell/nu_scripts/custom-completions/tcpdump/tcpdump-completions.nu
-
