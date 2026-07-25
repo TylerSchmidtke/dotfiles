@@ -30,7 +30,7 @@ $env.PATH = (
   append $"/opt/homebrew/opt/llvm/bin" |
   append $"($nu.home-dir)/.opencode/bin" |
   append $"($nu.home-dir)/.dotnet/tools" |
-  append $"($nu.home-dir/.radicle/bin)"
+  append $"($nu.home-dir)/.radicle/bin)"
 )
 
 # Editor
