@@ -18,6 +18,11 @@ args = ["--stdio"]
 [language-server.harper-ls.config]
 "harper-ls" = {}
 
+# ZK for notes
+[language-server.zk]
+command = "zk"
+args = ["lsp"]
+
 # ─────────────────────────────  Rust  ─────────────────────────────
 # LSP: rust-analyzer  •  Debugger: lldb-dap  (both Helix defaults)
 [language-server.rust-analyzer.config]
