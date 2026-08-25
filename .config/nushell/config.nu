@@ -33,6 +33,18 @@ $env.PATH = (
   append $"($nu.home-dir)/.radicle/bin"
 )
 
+## Helix mode
+$env.config.edit_mode = "helix"
+# Disable prompt from Nushell Because it is duplicated with that of Starship
+$env.PROMPT_INDICATOR_VI_NORMAL = ""
+$env.PROMPT_INDICATOR_VI_INSERT = ""
+
+# Use cursor shapes to differentiate instead
+$env.config.cursor_shape.helix_insert = "blink_underscore"
+$env.config.cursor_shape.helix_normal = "blink_block"
+$env.config.cursor_shape.helix_select = "block"
+##
+
 # Editor
 $env.config.buffer_editor = "hx"
 $env.EDITOR = "hx"
@@ -87,6 +99,17 @@ def set-theme [name: string] {
     open --raw $tuicr_cfg
     | str replace --regex '(?m)^theme = ".*"' $'theme = "($name)"'
     | save --force $tuicr_cfg
+  }
+  # herdr: no theme-file loader, so splice the whole [theme.custom] block into
+  # config.toml between markers, then live-reload the running server
+  let herdr_cfg = ($nu.home-dir | path join ".config/herdr/config.toml")
+  let herdr_theme = ($nu.home-dir | path join $".config/herdr/themes/($name).toml")
+  if ($herdr_theme | path exists) and ($herdr_cfg | path exists) {
+    let block = (open --raw $herdr_theme | lines | skip until {|l| $l =~ '^\[theme.custom\]' } | str join "\n")
+    open --raw $herdr_cfg
+    | str replace --regex '(?s)# >>> herdr theme.*?# <<< herdr theme \(managed by set-theme\) <<<' $"# >>> herdr theme \(managed by set-theme\) >>>\n($block)\n# <<< herdr theme \(managed by set-theme\) <<<"
+    | save --force $herdr_cfg
+    try { herdr server reload-config } catch { }
   }
 }
 def --env day [] {
