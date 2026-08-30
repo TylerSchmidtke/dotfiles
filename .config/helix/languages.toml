@@ -133,3 +133,7 @@ language-servers = ["marksman", "markdown-oxide", "harper-ls"]
 [[language]]
 name = "mail"
 language-servers = ["harper-ls"]
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"]}
