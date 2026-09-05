@@ -1,0 +1,35 @@
+# GitHub Light Colorblind for Herdr
+# Palette: GitHub's official colorblind-safe light theme
+# (https://github.com/primer/github-vscode-theme)
+# note: red-green (deutan/protan) colorblind-safe — "green" success/add roles
+# are mapped onto the same blue used for accents; red shifts to orange.
+#
+# Herdr has no theme-file loader: this block is spliced into
+# ~/.config/herdr/config.toml by `set-theme` (see ~/.config/nushell/config.nu).
+
+[theme.custom]
+# accent — highlights, focused borders, navigation UI (accent.fg)
+accent = "#0969da"
+
+# backgrounds, lightest to darkest
+panel_bg = "#ffffff"    # canvas.default — matches the Ghostty background
+surface_dim = "#f6f8fa" # canvas.subtle — recessed wells
+surface0 = "#eaeef2"    # neutral.muted — raised rows, popups
+surface1 = "#d0d7de"    # border.default — selection, active rows
+
+# muted foregrounds, faintest to strongest
+overlay0 = "#8c959f"    # dividers, inactive borders
+overlay1 = "#6e7781"    # inactive labels, disabled text
+
+# primary foregrounds
+text = "#24292f"        # fg.default
+subtext0 = "#57606a"    # fg.muted
+
+# semantic accents
+red = "#b35900"         # danger.fg — orange, not red (colorblind-safe)
+peach = "#8a4600"       # severe.fg — darker orange
+yellow = "#9a6700"      # attention.fg
+green = "#0969da"       # success.fg — blue, not green (colorblind-safe)
+blue = "#0550ae"        # deeper blue, distinct from accent
+teal = "#1b7c83"        # cyan
+mauve = "#8250df"       # done.fg — purple
